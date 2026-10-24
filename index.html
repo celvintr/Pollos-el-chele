@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#090909">
+  <meta name="description" content="Menú digital de Pollos El Chele, el mejor pollo chuco de Comayagua.">
+  <title>Pollos El Chele | Menú Digital</title>
+  <style>
+    :root{--gold:#f4c542;--red:#b5121b;--bg:#090909;--card:#151515;--muted:#c9c4ba}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at top,#29221a 0,#090909 50%);color:#fff;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+    header{text-align:center;padding:58px 18px 38px;border-bottom:1px solid #6d541c;background:linear-gradient(#0008,#000d),url('https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?auto=format&fit=crop&w=1600&q=85') center/cover}
+    .eyebrow{color:var(--gold);letter-spacing:.25em;text-transform:uppercase;font-size:.78rem}.brand{font-family:Georgia,serif;color:var(--gold);font-size:clamp(2.4rem,8vw,4.8rem);margin:12px 0;text-shadow:0 3px 18px #000}.subtitle{font-family:Georgia,serif;font-style:italic;font-size:1.08rem}
+    .call{display:inline-block;background:var(--gold);color:#111;text-decoration:none;font-weight:800;padding:13px 24px;border-radius:999px;margin-top:16px}
+    nav{position:sticky;top:0;z-index:5;display:flex;gap:8px;overflow:auto;padding:12px;background:#0d0d0df2;border-bottom:1px solid #6d541c;justify-content:center}
+    nav button{white-space:nowrap;border:1px solid #8c702d;background:transparent;color:var(--gold);border-radius:999px;padding:10px 15px;font-weight:700;cursor:pointer}nav button.active{background:var(--gold);color:#111}
+    main{width:min(900px,100%);margin:auto;padding:26px 16px 110px}.category{margin:0 0 34px}.category h2{font-family:Georgia,serif;text-transform:uppercase;letter-spacing:.06em;background:linear-gradient(90deg,#8e0d14,#c91d25,#8e0d14);border:1px solid var(--gold);border-radius:9px;padding:13px 16px;margin:0;font-size:1.35rem}
+    ul.items{list-style:none;padding:0;margin:12px 0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.items li{display:flex;align-items:center;justify-content:space-between;gap:12px;background:var(--card);border:1px solid #51421f;border-radius:9px;padding:15px}.price{white-space:nowrap;color:var(--gold);font-weight:800}
+    .sauce{margin-top:35px;border:1px solid var(--gold);border-radius:12px;overflow:hidden;background:var(--card)}.sauce img{display:block;width:100%;height:210px;object-fit:cover}.sauce div{text-align:center;padding:20px}.sauce h2{font-family:Georgia,serif;color:var(--gold);margin:0 0 8px}.sauce p{color:var(--muted);margin:0}
+    footer{text-align:center;padding:28px 0;color:var(--gold);font-family:Georgia,serif;font-size:1.6rem}footer a{font:600 1rem system-ui;color:var(--gold)}
+    .floating{position:fixed;bottom:14px;left:14px;right:14px;z-index:8;display:block;text-align:center;background:var(--red);color:#fff;text-decoration:none;font-size:1.05rem;font-weight:800;padding:16px;border:1px solid var(--gold);border-radius:999px;box-shadow:0 8px 28px #0009}
+    @media(max-width:600px){nav{justify-content:flex-start}ul.items{grid-template-columns:1fr}.items li{padding:14px}.category h2{font-size:1.18rem}header{padding-top:44px}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="eyebrow">Comayagua · Honduras</div>
+    <h1 class="brand">Pollos El Chele</h1>
+    <div class="subtitle">El mejor pollo chuco de Comayagua</div>
+    <a class="call" href="tel:+50432438121">☎ 3243-8121</a>
+  </header>
+  <nav aria-label="Filtrar menú">
+    <button class="active" data-filter="all">Todo</button>
+    <button data-filter="personal">El Personal</button>
+    <button data-filter="economico">El Económico</button>
+    <button data-filter="variar">Pa Variar</button>
+    <button data-filter="familia">Pa la Familia</button>
+  </nav>
+  <main>
+    <section class="category" data-category="personal">
+      <h2>El Personal</h2><ul class="items">
+        <li><span>Pierna con Tajadas</span><span class="price">L. 130</span></li>
+        <li><span>Pierna con Papas</span><span class="price">L. 130</span></li>
+        <li><span>Pechuga con Tajadas</span><span class="price">L. 160</span></li>
+        <li><span>Pechuga con Papas</span><span class="price">L. 160</span></li>
+      </ul>
+    </section>
+    <section class="category" data-category="economico">
+      <h2>El Económico</h2><ul class="items">
+        <li><span>Pierna o Muslo c/ Tajadas</span><span class="price">L. 100</span></li>
+        <li><span>Pierna o Muslo c/ Papas</span><span class="price">L. 110</span></li>
+        <li><span>Pechuga o Ala c/ Tajadas</span><span class="price">L. 125</span></li>
+        <li><span>Pechuga o Ala c/ Papas</span><span class="price">L. 125</span></li>
+      </ul>
+    </section>
+    <section class="category" data-category="variar">
+      <h2>Pa Variar</h2><ul class="items">
+        <li><span>Tajadas con Carne</span><span class="price">L. 90</span></li>
+        <li><span>Enchilada de Res</span><span class="price">Consultar</span></li>
+        <li><span>Chuleta con Tajadas</span><span class="price">L. 160</span></li>
+        <li><span>Tacos con Tajadas</span><span class="price">L. 120</span></li>
+        <li><span>Tacos</span><span class="price">L. 90</span></li>
+        <li><span>Nachos de Pollo</span><span class="price">L. 120</span></li>
+        <li><span>Nachos de Res</span><span class="price">L. 120</span></li>
+        <li><span>Deditos de Pollo</span><span class="price">L. 160</span></li>
+      </ul>
+    </section>
+    <section class="category" data-category="familia">
+      <h2>Pa la Familia</h2><ul class="items">
+        <li><span>Familiar con Tajadas</span><span class="price">L. 500</span></li>
+        <li><span>Familiar con Papas</span><span class="price">L. 500</span></li>
+        <li><span>Pollo Entero Frito</span><span class="price">L. 230</span></li>
+        <li><span>Medio Pollo Frito</span><span class="price">L. 130</span></li>
+        <li><span>Alitas 6</span><span class="price">L. 180</span></li>
+        <li><span>Alitas 8</span><span class="price">L. 210</span></li>
+        <li><span>Alitas 12</span><span class="price">L. 270</span></li>
+      </ul>
+    </section>
+    <section class="sauce">
+      <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=1200&q=80" alt="Comida recién preparada" loading="lazy">
+      <div><h2>🌶 Salsas &amp; aderezos de la casa</h2><p>Todos nuestros platillos incluyen el aderezo especial de Pollos El Chele.</p></div>
+    </section>
+    <footer>¡Gracias por su visita!<br><a href="tel:+50432438121">Pedidos: 3243-8121</a></footer>
+  </main>
+  <a class="floating" href="tel:+50432438121">☎ Llamar para ordenar</a>
+  <script>
+    const buttons = document.querySelectorAll('nav button');
+    const sections = document.querySelectorAll('[data-category]');
+    buttons.forEach(button => button.addEventListener('click', () => {
+      buttons.forEach(b => b.classList.toggle('active', b === button));
+      sections.forEach(section => {
+        section.hidden = button.dataset.filter !== 'all' && section.dataset.category !== button.dataset.filter;
+      });
+    }));
+  </script>
+</body>
+</html>
